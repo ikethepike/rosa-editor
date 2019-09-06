@@ -33,8 +33,8 @@ export default {
   },
 };
 </script>
-<style scoped>
-p {
+<style>
+.content-block p {
   margin: 0;
 }
 .content-block {
