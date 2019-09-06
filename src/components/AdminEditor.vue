@@ -1,5 +1,5 @@
 <template>
-  <main id="admin-editor" :class="{ darkmode, preview }">
+  <main id="admin-editor" :class="{ darkmode, preview, 'with-header': header }">
     <div class="content-pane">
       <label
         id="masthead"
@@ -151,6 +151,7 @@ export default {
   display: flex;
   height: 100vh;
   transition: 0.6s;
+  overflow: hidden;
   position: relative;
   align-items: stretch;
 }
@@ -184,7 +185,9 @@ export default {
   height: 2.5rem;
   background: #222;
   align-items: center;
+  background-size: cover;
   justify-content: center;
+  background-position: center;
   color: rgba(255, 255, 255, 0);
   transition: height 1s, color 2s;
 }
@@ -194,6 +197,10 @@ export default {
 }
 #masthead::after {
   content: 'Drag image here';
+}
+
+.with-header #masthead {
+  height: 20rem;
 }
 .text-wrapper {
   width: 100%;
